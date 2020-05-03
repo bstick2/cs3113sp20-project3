@@ -38,8 +38,10 @@ int firstFit(int blockSize[], int m, int processSize[], int n){
 
 	for (int i = 0; i < n; i++)
 	{
-		if (allocation[i] != -1) allocation[i]++;
-		else 
+		if (allocation[i] != -1) {
+			allocation[i]++;
+			return 1;
+		else return 0;			//returns 0 because the process was not allocated.
 	}
 }
 
